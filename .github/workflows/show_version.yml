@@ -1,5 +1,5 @@
 # .github/workflows/test_action.yaml
-name: Test Action
+name: Get Version
 on: [push]
 
 jobs:
