@@ -1,0 +1,30 @@
+# .github/workflows/test_action.yaml
+name: Get Version
+on: [ push ]
+
+jobs:
+  check-python-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Config Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Show Python Version
+
+        run: python --version
+      - name: Checkout repozytorium
+        uses: actions/checkout@v2
+      - name: Skonfiguruj Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Zainstaluj zależności
+        run: pip install pylint
+      - name: Uruchom PyLint
+        run: pylint --exit -zero app.py
