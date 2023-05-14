@@ -16,8 +16,8 @@ jobs:
       - name: Skonfiguruj Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  # Wybierz wersję Pythona, której chcesz użyć
+          python-version: 3.x
       - name: Zainstaluj zależności
         run: pip install pylint
       - name: Uruchom PyLint
-        run: find app.py
+        run: pylint --exit -zero app.py
