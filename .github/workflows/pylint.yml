@@ -20,4 +20,4 @@ jobs:
       - name: Zainstaluj zależności
         run: pip install pylint
       - name: Uruchom PyLint
-        run: pylint your_code.py  # Zastąp `your_code.py` nazwą pliku lub katalogu, który chcesz przetestować
+        run: find app.py
